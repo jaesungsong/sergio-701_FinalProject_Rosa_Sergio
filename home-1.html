@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32"/>
+
+    <title>Fitness Tracker</title>
+	<script src="js/angular10.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<style>
+body  {
+    
+    /*background: url("images/BG.jpg");*/
+}
+
+</style>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap-3.3.6/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="bootstrap-3.3.6/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootstrap-3.3.6/docs/examples/theme/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap-3.3.6/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="Index.html">Fitness Tracker</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li ><a href="calories_intake.html">Calories Tracker</a></li>
+            <li><a href="exercise.html">Exercise Tracker</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="underweight.html">Gain Weight</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="over.html">Lose Weight</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      
+
+      
+
+
+   
+       
+
+
+      <div class="page-header">
+        <h1>BMI Index Calculator</h1>
+      </div>
+	  <div class="container">  
+	  <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" style="background-color:#2B0A00; margin-left:30%;">
+            <li class="active"><a href="home.html" style="text-decoration:underline; border:1px solid grey;">In CM & KG</a></li>
+            <li style="border:1px solid grey;"><a href="home-1.html">In Inches and Pounds</a></li>
+	  </ul>
+	  </div>
+	 </div>
+	
+	  
+	  
+	 <div style="background-color:black; margin-left:30%; margin-right:42%">
+      <form class="form-inline" style="padding-top:10px; padding-left:10px; padding-bottom:10px; color: #ff884d;">
+    <div class="form-group">
+      <label>Height:</label>
+    </div>
+    <div class="form-group">
+      <select name="my_height" ng-model="height" id="height" data-live-search="true" title="Enter your Height in CM" style="padding-right:5px;">
+       
+      </select>&nbsp;In
+    </div>
+	
+	<div class="form-group">
+      <label>Age:</label>
+    </div>
+	<div class="form-group">
+      <select ng-model="age" id="age"  data-live-search="true" title="Enter your age" style="padding-right:17px;">
+      </select>
+	 </div>
+	<div class="form-group">
+      <label>Weight:</label>
+    </div>
+	<div class="form-group">
+      <select ng-model="weight" id="weight"  data-live-search="true" title="Enter your Weight in KG">
+      </select>&nbsp;Lbs
+	</div>
+	<div class="form-group" style="padding-left:20px;">
+	<input type="radio" name="sex" value="male">&nbsp;&nbsp;Male<br>
+<input type="radio" name="sex" value="female">&nbsp;&nbsp;Female
+</div>
+  </form>
+ </div>
+
+  <p style="margin-left:38%; padding-top:25px;">
+        
+        <button id="Result" type="button" class="btn btn-lg btn-info"=>Calculate</button>
+       
+      </p>
+<div style="background-color:black; color:red; width:50%;">	  
+  <div id="o1" style="display: none;">
+  <p class="res" type="number">{{(weight*703)/(height*height)}}</p>
+  
+  <p>You are underweight... Don't worry check out our links and programs... Click the Link <span><a href="underweight.html">For Gaining Weight</a></br></span><span><a href="over.html">For losing Weight</a></span></p>
+  </div>
+  
+  <div id="o2" style="display: none;">
+  <p class="res" type="number">{{(weight*703)/(height*height)}}</p>
+  
+  <p></p>
+  </div>
+  
+  <div id="o3" style="display: none;">
+  <p class="res" type="number">{{(weight*703)/(height*height)}}</p>
+  
+  <p>You are Overweight, Don't worry check out our links and programs... Click the Link <span><a href="underweight.html">For Gaining Weight</a></br></span><span><a href="over.html">For losing Weight</a></span></p>
+  </div>
+  
+  <div id="o4" style="display: none;">
+  <p class="res" type="number">{{(weight*703)/(height*height)}}</p>
+  
+  <p>Nice Job.... You're in perfect zone.. But you still need to maintain it.. Click the Link <span><a href="underweight.html">For Gaining Weight</a></br></span><span><a href="over.html">For losing Weight</a></span></p>
+  </div>
+  
+</div> 
+  
+  
+	  
+    <script>
+	
+$( document ).ready(function(){	
+
+  $("#height").change(function(){
+    $("#o1").hide();
+	$("#o2").hide();
+	$("#o3").hide();
+	$("#o4").hide();
+  });
+  $("#weight").change(function(){
+    $("#o1").hide();
+	$("#o2").hide();
+	$("#o3").hide();
+	$("#o4").hide();
+  });
+  $("#age").change(function(){
+    $("#o1").hide();
+	$("#o2").hide();
+	$("#o3").hide();
+	$("#o4").hide();
+  });
+/*
+  else if (Val==0)
+  {
+		
+		$("#res").html("Enter all the values to get the correct result");
+     
+  }
+  */
+
+  var Val = $( ".res" ).html();
+  var AgeM= $("select#age").val();
+	$('#Result').click(function(){
+	     var Val = $(".res" ).html();
+         var AgeM= $("select#age").val();
+         
+		 
+         if (Val <= 18 && AgeM<=17){
+          $(".res").html("You're BMI - "+Val);
+		 
+		  $('#o1').show();
+}
+else if (Val=="null")
+  {
+		
+		$(".res").html("Enter all the values to get the correct result");
+     $("#o2").show();
+  }
+  else if (Val >18 && Val<23 && AgeM<=17)
+  {
+		
+		$(".res").html("You're BMI - "+Val);
+		  $('#o4').show();
+     
+  }
+  else if (Val >23 && AgeM<=17)
+  {
+		
+		$(".res").html("You're BMI - "+Val);
+		  $('#o3').show();
+     
+  }
+  if (Val <= 19 && AgeM>17){
+          $(".res").html("You're BMI - "+Val);
+		  
+		  $('#o1').show();
+}
+  else if (Val >19 && Val<23 && AgeM>17)
+  {
+		
+		$(".res").html("You're BMI - "+Val);
+		  $('#o4').show();
+     
+  }
+  else if (Val>23 && AgeM>17)
+  {
+		
+		$(".res").html("You're BMI - "+Val);
+		  $('#o3').show();
+     
+  }
+  
+
+
+})
+});
+	</script>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="bootstrap-3.3.6/docs/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="bootstrap-3.3.6/docs/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.3.6/docs/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap-3.3.6/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script>
+	$(document).ready(function () {
+	for(var x = 80; x < 401; x=x+0.5) {
+				var element = $('select#weight');
+				element.append("<option value='"+x+"'>"+ x +"</option>");
+			}
+  
+  
+  for(var x = 40; x < 101; x=x+0.5) {
+				var element = $('select#height');
+				element.append("<option value='"+x+"'>"+ x +"</option>");
+			}
+	for(var x = 10; x < 101; x++) {
+				var element = $('select#age');
+				element.append("<option value='"+x+"'>"+ x +"</option>");
+			}
+  
+  });
+	</script>
+  </body>
+</html>
