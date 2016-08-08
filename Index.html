@@ -27,6 +27,7 @@ body  {
 
     <!-- Custom styles for this template -->
     <link href="bootstrap-3.3.6/docs/examples/theme/theme.css" rel="stylesheet">
+				<link href="./style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -59,7 +60,7 @@ body  {
             <li ><a href="calories_intake.html">Calories Tracker</a></li>
             <li><a href="exercise.html">Exercise Tracker</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directory<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="underweight.html">Gain Weight</a></li>
                 <li role="separator" class="divider"></li>
@@ -74,18 +75,10 @@ body  {
     <div class="container theme-showcase" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      
-
-      
-
-
-      
-
-
       <div class="page-header">
-        <h1>Welcome!</h1>
+        <!-- <h1>Welcome!</h1> -->
       </div>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:80%; margin-left:4%">
+      <!-- <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:80%; margin-left:4%">
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -111,16 +104,8 @@ body  {
           <span class="sr-only">Next</span>
         </a>
       </div>
-	  <p style="padding-left:39%; padding-top:14px;">
-        
-        <button onclick="location.href = 'home.html';" type="button" class="btn btn-lg btn-info"=>Get Started</button>
-       
-      </p>
-
-
+				-->
     </div> <!-- /container -->
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -130,5 +115,35 @@ body  {
     <script src="bootstrap-3.3.6/docs/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap-3.3.6/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
+		
+		<!--  block menu  -->
+		<hr>
+		<div class="container block">
+			<div class="row">
+				<div class="col col-1">
+					<div id="bmi" class="block">
+						<h2>BMI Index Calculator</h2>
+					</div>
+				</div>
+				<div class="col col-2">
+					<div id="calories" class="block">
+						<h2>Calories Tracker</h2>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div id="exercise" class="block">
+						<h2>Exercise Tracker</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('#bmi').click(function(){window.location.href = "Home.html";});
+				jQuery('#calories').click(function(){window.location.href = "calories_intake.html";});
+				jQuery('#exercise').click(function(){window.location.href = "Exercise.html";});
+			});
+		</script>
+		<!-- /  block menu  -->
   </body>
 </html>

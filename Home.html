@@ -30,6 +30,7 @@ body  {
 
     <!-- Custom styles for this template -->
     <link href="bootstrap-3.3.6/docs/examples/theme/theme.css" rel="stylesheet">
+				<link href="./style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -62,7 +63,7 @@ body  {
             <li ><a href="calories_intake.html">Calories Tracker</a></li>
             <li><a href="exercise.html">Exercise Tracker</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directory	 <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directory<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="underweight.html">Gain Weight</a></li>
                 <li role="separator" class="divider"></li>
@@ -86,58 +87,42 @@ body  {
        
 
 
-      <div class="page-header">
-        <h1>BMI Index Calculator</h1>
-      </div>
-	  <div class="container">  
-	  <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav" style="background-color:#2B0A00; margin-left:30%;">
-            <li class="active"><a href="home.html" style="border:1px solid grey;">In CM & KG</a></li>
-            <li style="text-decoration:underline; border:1px solid grey;"><a href="home-1.html">In Inches and Pounds</a></li>
-	  </ul>
-	  </div>
-	 </div>
-	
-	  
-	  
-	 <div style="background-color:black; margin-left:30%; margin-right:42%">
-      <form class="form-inline" style="padding-top:10px; padding-left:10px; padding-bottom:10px; color:#ff884d;">
+  <div class="page-header">
+    <h1>BMI Index Calculator</h1>
+  </div>
+	<ul class="nav nav-tabs">
+	  <li role="presentation" class="active"><a href="#">In CM & KG</a></li>
+	  <li role="presentation"><a href="home-1.html">In Inches and Pounds</a></li>
+	</ul>
+	<div class="tab-content">
+	 <div>
+      <form class="form-inline">
     <div class="form-group">
       <label>Height:</label>
-    </div>
-    <div class="form-group">
-      <select name="my_height" ng-model="height" id="height" data-live-search="true" title="Enter your Height in CM" style="padding-right:5px;">
-       
+      <select name="my_height" ng-model="height" id="height" data-live-search="true" title="Enter your Height in CM">
       </select>&nbsp;CM
     </div>
 	
 	<div class="form-group">
       <label>Age:</label>
-    </div>
-	<div class="form-group">
-      <select ng-model="age" id="age"  data-live-search="true" title="Enter your age" style="padding-right:17px;">
+      <select ng-model="age" id="age"  data-live-search="true" title="Enter your age">
       </select>
 	 </div>
 	<div class="form-group">
       <label>Weight:</label>
-    </div>
-	<div class="form-group">
       <select ng-model="weight" id="weight"  data-live-search="true" title="Enter your Weight in KG">
       </select>&nbsp;KG
 	</div>
-	<div class="form-group" style="padding-left:20px;">
-	<input type="radio" name="sex" value="male">&nbsp;&nbsp;Male<br>
-<input type="radio" name="sex" value="female">&nbsp;&nbsp;Female
-</div>
+	<div class="form-group">
+		<input type="radio" name="sex" value="male">&nbsp;&nbsp;Male<br>
+		<input type="radio" name="sex" value="female">&nbsp;&nbsp;Female
+	</div>
+	<button id="Result" type="button" class="btn btn-lg btn-info"=>Calculate</button>
   </form>
  </div>
 
-  <p style="margin-left:38%; padding-top:25px;">
-        
-        <button id="Result" type="button" class="btn btn-lg btn-info"=>Calculate</button>
-       
-      </p>
-<div style="background-color:black; color:red; width:50%;">	  
+
+<div>	  
   <div id="o1" style="display: none;">
   <p class="res" type="number">{{weight/(height*height)*10000}}</p>
   
@@ -254,7 +239,7 @@ else if (Val=="null")
 });
 	</script>
 
-    </div> <!-- /container -->
+</div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -285,5 +270,35 @@ else if (Val=="null")
   
   });
 	</script>
+	
+		<!--  block menu  -->
+		<hr>
+		<div class="container block">
+			<div class="row">
+				<div class="col col-1">
+					<div id="bmi" class="block">
+						<h2>BMI Index Calculator </h2>
+					</div>
+				</div>
+				<div class="col col-2">
+					<div id="calories" class="block">
+						<h2>Calories Tracker</h2>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div id="exercise" class="block">
+						<h2>Exercise Tracker</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('#bmi').click(function(){window.location.href = "Home.html";});
+				jQuery('#calories').click(function(){window.location.href = "calories_intake.html";});
+				jQuery('#exercise').click(function(){window.location.href = "Exercise.html";});
+			});
+		</script>
+		<!-- /  block menu  -->
   </body>
 </html>

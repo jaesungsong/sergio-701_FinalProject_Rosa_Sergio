@@ -13,12 +13,6 @@
     <title>Fitness Tracker</title>
 	<script src="js/angular10.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<style>
-body  {
-    
-    background: url("images/BG.jpg");
-}
-</style>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,6 +23,7 @@ body  {
 
     <!-- Custom styles for this template -->
     <link href="bootstrap-3.3.6/docs/examples/theme/theme.css" rel="stylesheet">
+		<link href="./style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -191,7 +186,7 @@ tr :hover { background: #666; color: #FFF; } /* Hover cell effect! */
             <li><a href="calories_intake.html">Calories Tracker</a></li>
             <li class="active"><a href="exercise.html">Exercise Tracker</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directory<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="underweight.html">Gain Weight</a></li>
                 <li role="separator" class="divider"></li>
@@ -281,6 +276,37 @@ Chin Ups
     <script src="bootstrap-3.3.6/docs/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="bootstrap-3.3.6/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
-	
+
+
+		<!--  block menu  -->
+		<hr>
+		<div class="container block">
+			<div class="row">
+				<div class="col col-1">
+					<div id="bmi" class="block">
+						<h2>BMI Index Calculator</h2>
+					</div>
+				</div>
+				<div class="col col-2">
+					<div id="calories" class="block">
+						<h2>Calories Tracker</h2>
+					</div>
+				</div>
+				<div class="col col-3">
+					<div id="exercise" class="block">
+						<h2>Exercise Tracker</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			jQuery(document).ready(function(){
+				jQuery('#bmi').click(function(){window.location.href = "Home.html";});
+				jQuery('#calories').click(function(){window.location.href = "calories_intake.html";});
+				jQuery('#exercise').click(function(){window.location.href = "Exercise.html";});
+			});
+		</script>
+		<!-- /  block menu  -->
+
   </body>
 </html>
