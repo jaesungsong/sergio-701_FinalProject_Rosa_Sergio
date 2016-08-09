@@ -5,7 +5,7 @@
 .tab-content{border-top:0;}
 .container.block{color:#fff;}
 .container .row{width:100%; text-align:center;}
-.container .row .col{display:inline-block; width:33%; vertical-align:top;}
+.container .row .col{display:inline-block; width:33%; vertical-align:top; white-space:nowrap;}
 .container .row .col #bmi{background-color: #8b647f;}
 .container .row .col #calories{background-color: #16ac96;}
 .container .row .col #exercise{background-color: #CD553D;}
