@@ -63,7 +63,7 @@ body  {
             <li ><a href="calories_intake.html">Calories Tracker</a></li>
             <li><a href="exercise.html">Exercise Tracker</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directory <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="underweight.html">Gain Weight</a></li>
                 <li role="separator" class="divider"></li>
@@ -96,15 +96,15 @@ body  {
 	</ul>
 	<div class="tab-content">
 	 <div>
-      <form class="form-inline" style="padding-top:10px; padding-left:10px; padding-bottom:10px; color: #ff884d;">
+      <form class="form-inline">
 				<div class="form-group">
 	      <label>Height:</label>
-	      <select name="my_height" ng-model="height" id="height" data-live-search="true" title="Enter your Height in CM" style="padding-right:5px;">
+	      <select name="my_height" ng-model="height" id="height" data-live-search="true" title="Enter your Height in CM" >
 	      </select>&nbsp;In
     		</div>	
 				<div class="form-group">
 			      <label>Age:</label>
-			      <select ng-model="age" id="age"  data-live-search="true" title="Enter your age" style="padding-right:17px;">
+			      <select ng-model="age" id="age"  data-live-search="true" title="Enter your age" >
 			      </select>
 				 </div>
 				<div class="form-group">
@@ -112,7 +112,7 @@ body  {
 			      <select ng-model="weight" id="weight"  data-live-search="true" title="Enter your Weight in KG">
 			      </select>&nbsp;Lbs
 				</div>
-				<div class="form-group" style="padding-left:20px;">
+				<div class="form-group" >
 					<input type="radio" name="sex" value="male">&nbsp;&nbsp;Male<br>
 					<input type="radio" name="sex" value="female">&nbsp;&nbsp;Female
 				</div>
@@ -120,7 +120,7 @@ body  {
   		</form>
 	 </div>
 
-<div style="background-color:black; color:red; width:50%;">	  
+<div class="result-content">	  
   <div id="o1" style="display: none;">
   <p class="res" type="number">{{(weight*703)/(height*height)}}</p>
   
