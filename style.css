@@ -9,6 +9,8 @@
 .container .row .col #bmi{background-color: #8b647f;}
 .container .row .col #calories{background-color: #16ac96;}
 .container .row .col #exercise{background-color: #CD553D;}
+.container .row .col #map{background-color: #CD553D;}
+.container .row .col.col-4{width:100%;}
 .container .row .col .block{
 	padding:1em; margin:1em;
 	-moz-transition: all 0.2s;
